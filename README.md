@@ -1,0 +1,2 @@
+# xulapp-boilerplate
+XULRunner Boilerplate
