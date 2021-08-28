@@ -37,14 +37,12 @@ if not os.path.isdir("./xulapp/browser"):
         sys.exit(1)
 
     # extract the jar file
-    subprocess.call(
-        [
-            "/usr/bin/unzip",
-            jarfile,
-            "-d",
-            "./xulapp/browser/",
-        ]
-    )
+    subprocess.call([
+        "/usr/bin/unzip",
+        jarfile,
+        "-d",
+        "./xulapp/browser/",
+    ])
 
     # Rewrite xulapp/browser/chrome/chrome.manifest
     manifestFile = open("xulapp/browser/chrome/chrome.manifest", "r")
@@ -62,14 +60,12 @@ if not os.path.isdir("./xulapp/browser"):
     manifestFile.write(manifest)
     manifestFile.close()
 
-subprocess.call(
-    [
-        firefox,
-        "--app",
-        "./xulapp/application.ini",
-        "-profile",
-        "./profile",
-        "--no-remote",
-    ]
-)
+subprocess.call([
+    firefox,
+    "--app",
+    "./xulapp/application.ini",
+    "-profile",
+    "./profile",
+    "--no-remote",
+])
 print("\n")
