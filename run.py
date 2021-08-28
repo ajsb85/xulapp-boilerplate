@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-import os
-import sys
-import subprocess
-import shutil
-
 import argparse
+import os
+import shutil
+import subprocess
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
