@@ -5,6 +5,7 @@ import subprocess
 import shutil
 
 import argparse
+
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--firefox",
@@ -39,11 +40,10 @@ if not os.path.isdir("./xulapp/browser"):
     # extract the jar file
     subprocess.call(
         [
-            '/usr/bin/unzip',
+            "/usr/bin/unzip",
             jarfile,
-
-            '-d',
-            './xulapp/browser/',
+            "-d",
+            "./xulapp/browser/",
         ]
     )
 
@@ -66,13 +66,10 @@ if not os.path.isdir("./xulapp/browser"):
 subprocess.call(
     [
         firefox,
-
         "--app",
         "./xulapp/application.ini",
-
         "-profile",
         "./profile",
-
         "--no-remote",
     ]
 )
